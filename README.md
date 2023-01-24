@@ -1,2 +1,2 @@
 # ReactNetwork
-educational version of the social network on react
+This is a learning project for learning React + Redux + Saga
