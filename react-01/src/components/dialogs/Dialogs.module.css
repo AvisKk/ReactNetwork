@@ -1,0 +1,114 @@
+.dialogs {
+    display: grid;
+    grid-template-columns: 1.5fr 8fr;
+    grid-template-rows: 370px;
+}
+
+.dialogItems {
+    margin-bottom: 20px;
+    margin-right: 10px;
+    background-color: aliceblue;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    overflow-y: scroll;
+}
+
+.dialogItems::-webkit-scrollbar {
+    width: 5px;
+
+}
+
+.dialogItems::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: teal;
+}
+
+.messages::-webkit-scrollbar {
+    width: 5px;
+}
+
+.messages::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: teal;
+    justify-self: end;
+}
+
+
+.dialogItems .item {
+    display: inline-block;
+    margin-left: 7px;
+    padding: 5px;
+    font-size: 17px;
+    color: darkslategray;
+    text-decoration: none;
+}
+
+.dialogItems .active {
+    display: inline-block;
+    margin-left: 7px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    padding: 5px;
+    font-size: 15pt;
+    color: aliceblue;
+    text-decoration: none;
+    background-color: teal;
+    border-radius: 15px;
+}
+
+.dialogItems img {
+    vertical-align: middle;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.messages {
+    padding: 20px;
+    background-color: aliceblue;
+    box-sizing: border-box;
+    width: 95%;
+    height: 300px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+border-radius: 5px;
+}
+
+.textarea {
+    width: 70%;
+    height: 100px;
+    resize: none;
+    background-color: powderblue;
+    border-radius: 10px;
+    outline-color: powderblue;
+    border-color: powderblue;
+    border-width: 3px;
+    margin-left: 10%;
+    margin-top: 20px;
+    color: darkslategray;
+    font-family: Verdana, serif;
+    font-size: 15px;
+}
+
+.button {
+    background-color: teal;
+    width: 5vw;
+    outline: none;
+    border: none;
+    color: aliceblue;
+    font-size: 1vw;
+    font-family: Verdana, serif;
+    padding: 5px;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+.back{
+    background-color: aliceblue;
+    box-sizing: border-box;
+    width: 95%;
+    height: 160px;
+    border-radius: 5px;
+    border-top: powderblue solid;
+}

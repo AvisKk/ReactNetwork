@@ -1,0 +1,14 @@
+.formControl {
+
+}
+
+.formControl.error input,
+.formControl.error textarea {
+    border: teal 2px solid;
+}
+
+.formControl.error span {
+    margin-left: 5px;
+    color: teal;
+    font-family: Verdana serif;
+}

@@ -1,0 +1,39 @@
+
+.item {
+    padding: 20px;
+}
+
+.myPosts {
+    font-family: Verdana, serif;
+    color: darkslategray;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.textarea {
+    width: 95%;
+    height: 100px;
+    resize: none;
+    background-color: aliceblue;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    color: darkslategray;
+    font-size: 17px;
+    font-family: Verdana, serif;
+}
+
+.button {
+    background-color: teal;
+    outline: none;
+    border: none;
+    color: aliceblue;
+    font-size: 16px;
+    font-family: Verdana, serif;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.postsElement {
+    width: 80%;
+}

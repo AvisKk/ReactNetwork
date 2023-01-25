@@ -1,0 +1,30 @@
+
+.item{
+  display: inline-block;
+  margin-top: 20px;
+  color: darkslategray;
+  padding: 2px;
+  border-radius: 10px;
+}
+
+.post{
+  display: inline-block;
+  background-color: aliceblue;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.item img{
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  border-radius: 30px;
+}
+
+.like{
+  color: teal;
+  margin-top: 5px;
+}
+
+
+

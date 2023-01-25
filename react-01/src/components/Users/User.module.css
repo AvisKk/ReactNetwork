@@ -1,0 +1,12 @@
+.photo{
+    vertical-align: middle;
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 100px;
+    background-color: aliceblue;
+}
+.users {
+    padding: 20px;
+    margin-left: 15px;
+}

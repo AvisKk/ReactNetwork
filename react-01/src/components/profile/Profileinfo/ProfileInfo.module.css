@@ -1,0 +1,60 @@
+
+.descriptionContainer{
+    padding: 15px;
+    position: relative;
+    font-family: Verdana, serif;
+    color: darkslategrey;
+
+    display: grid;
+    grid-template-areas: "a d";
+    grid-template-columns: 1fr 11fr;
+}
+
+.description{
+    grid-area: d;
+    margin-left: 20px;
+}
+
+.nickname{
+    margin-bottom: 1fr;
+    font-size: 40px;
+}
+
+.aboutMe{
+    margin-bottom: 15px;
+}
+
+.status{
+    box-sizing: border-box;
+    width: max-content;
+    height: max-content;
+    background-color: aliceblue;
+    padding: 5px;
+    border-radius: 10px;
+    border-top-left-radius: 0px;
+    margin-left: -15px;
+}
+.editStatus {
+    outline: none;
+}
+.avatarContainer{
+    grid-area: a;
+}
+
+.avatar{
+    padding: 3px;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50px;
+}
+
+.input_file {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+}
+
+.uploadIco{
+    width: 20px;
+}

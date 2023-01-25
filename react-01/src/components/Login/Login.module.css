@@ -1,0 +1,9 @@
+.formError {
+    color: teal;
+    padding: 5px;
+    font-family: Verdana serif;
+}
+
+.form {
+    margin-left: 10px;
+}

@@ -1,0 +1,26 @@
+.app-wrapper {
+    display: grid;
+    margin: auto;
+
+    grid-template-areas:
+  "h h"
+  "n c"
+  "m c"
+"b c";
+
+    grid-template-rows: 60px 200px 150px 1fr 120px;
+    grid-template-columns: 1fr 11fr;
+
+    background-color: powderblue;
+    background-size: cover;
+}
+
+.app-wrapper-content {
+    grid-area: c;
+    background-color: powderblue;
+}
+
+.back {
+    grid-area: b;
+    background-color: powderblue;
+}

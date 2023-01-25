@@ -1,0 +1,27 @@
+
+.selectedPage {
+    font-weight: bold;
+    padding: 10px;
+    font-family: Verdana, serif;
+    color: #4DB6AC;
+}
+
+.notSelectedPage {
+    padding: 5px;
+    font-family: Verdana, serif;
+    color: darkslategray;
+}
+
+.button {
+    font-family: Verdana, serif;
+    color: teal;
+    font-size: 15px;
+
+    border-radius: 10px;
+    border: none;
+
+
+    background-color: aliceblue;
+
+    margin-left: 10px;
+}

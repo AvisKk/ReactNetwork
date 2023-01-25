@@ -1,0 +1,26 @@
+.item img{
+    vertical-align: middle;
+    width: 25px;
+    height: 25px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.item{
+    font-size: 16px;
+    color: aliceblue;
+    text-decoration: none;
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.item .active{
+    color: aliceblue;
+    box-sizing: content-box;
+    padding: 4px;
+    text-decoration: none;
+    margin-top: 5px;
+    background-color: #4DB6AC;
+    border-radius: 10px;
+}

@@ -1,0 +1,33 @@
+.messages {
+    display: grid;
+    grid-template-areas: "i o";
+    grid-template-columns: 1fr 1fr;
+    width: 97%;
+    color: aliceblue;
+    padding: 10px;
+}
+
+
+.message {
+    grid-area: i;
+
+    box-sizing: border-box;
+    width: max-content;
+    height: max-content;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: darkslategray;
+    border-radius: 10px;
+}
+
+.outgoing {
+    grid-area: o;
+    justify-self: end;
+    box-sizing: border-box;
+    width: max-content;
+    height: max-content;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #4DB6AC;
+    border-radius: 10px;
+}

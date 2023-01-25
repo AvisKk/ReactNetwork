@@ -1,0 +1,12 @@
+
+.contacts{
+    grid-area: m;
+    color: aliceblue;
+    font-family: Verdana, serif;
+    font-size: 14pt;
+    background-color: teal;
+}
+
+.header{
+    margin-left: 20px;
+}
