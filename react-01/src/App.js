@@ -1,7 +1,7 @@
 import './App.css';
 import Navbar from './components/navbar/Navbar';
-import React, {Suspense} from "react";
-import {HashRouter, Route, Routes} from "react-router-dom";
+import React, {Suspense, useEffect} from "react";
+import {HashRouter, Navigate, Route, Routes} from "react-router-dom";
 import News from "./components/news/News";
 import Music from "./components/music/Music";
 import Settings from "./components/settings/Settings";
@@ -16,12 +16,13 @@ import Preloader from "./components/common/preloader/Preloader";
 const DialogsContainer = React.lazy(() => import('./components/dialogs/DialogsContainer'));
 const ProfileContainer = React.lazy(() => import('./components/profile/ProfileContainer'));
 
-class App extends React.Component {
-    componentDidMount() {
-        this.props.initializeApp();
-    }
-    render() {
-        if (!this.props.initialized){
+const App = (props) => {
+
+    useEffect(() => {
+    props.initializeApp()
+    }, [props.initialized])
+
+        if (!props.initialized){
         return <Preloader />}
 
         return (<HashRouter>
@@ -40,12 +41,14 @@ class App extends React.Component {
                             <Route path="/users" element={<UsersContainer/>}/>
                             <Route path="/settings" element={<Settings/>}/>
                             <Route path="/login" element={<Login/>}/>
+
+                            <Route exact path="/" element={<Navigate to={"/profile"}/>}/>
+                            <Route path="*" element={<div>404 NOT FOUND</div>}/>
                         </Routes>
                     </Suspense>
                 </div>
             </div>
         </HashRouter>)
-    }
 }
 
 const mapStateToProps = (state) => ({

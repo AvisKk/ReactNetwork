@@ -1,5 +1,5 @@
 import {ProfileAPI} from "../API/ProfileAPI";
-import {stopSubmit} from "redux-form";
+import {stopSubmit} from "react-final-form";
 
 const ADD_POST = 'ADD-POST';
 const SET_USERS_PROFILE = 'SET_USERS_PROFILE';
@@ -35,7 +35,7 @@ const profileReducer = (state = initialState, action) => {
                     id: 13,
                     message: text,
                     likesCount: 0,
-                    img: 'https://coolsen.ru/wp-content/uploads/2021/09/55.jpg'
+                    img: ''
                 }, ...state.posts]
             };
         case SET_USERS_PROFILE: {
@@ -96,7 +96,7 @@ export const saveProfile = (profile) => async (dispatch, getState) => {
         dispatch(getUsersProfile(userId))
     } else {
         let message = response.data.messages.length > 0 ? response.data.messages[0] : "Some error"
-        dispatch(stopSubmit("editProfile", {message}))
+        //dispatch(stopSubmit("editProfile", {message}))
         return Promise.reject(response.data.messages[0])
     }
 }

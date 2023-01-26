@@ -28,7 +28,7 @@ let Paginator = ({totalUsersCount, pageSize, onPageChanged, currentPage}) => {
                 Back
             </button>}
             {slicedPages.map(p => {
-                return <span className={currentPage === p ? styles.selectedPage : styles.notSelectedPage}
+                return <span key={p} className={currentPage === p ? styles.selectedPage : styles.notSelectedPage}
                              onClick={() => {
                                  onPageChanged(p)
                              }}>{p}</span>

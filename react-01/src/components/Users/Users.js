@@ -9,9 +9,9 @@ let Users = ({currentPage, totalUsersCount, pageSize, onPageChanged, ...props}) 
         {props.isFetching ?
             <Preloader/>
             :
-            props.users.map(u => <User user={u} followingInProgress={props.followingInProgress}
+            props.users.map(u => <div key={u.id}><User user={u} followingInProgress={props.followingInProgress}
             unfollowing={props.unfollowing}
-            following={props.following}/>)
+                                            following={props.following}/></div>)
         }
     </div>
 }

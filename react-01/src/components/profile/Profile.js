@@ -10,10 +10,7 @@ import ProfileInformationFormReduxForm from "./ProfileInformationForm";
 const Profile = (props) => {
     const onSubmit = (formData) => {
         props.saveProfile(formData).then(
-            ()=>{
-                setEditMode(false);
-            }
-        );
+            ()=>{setEditMode(false);});
     }
 
     let [editMode, setEditMode] = useState(false)

@@ -1,9 +1,56 @@
-.formError {
+.error {
+    padding: 4px;
+    background-color: powderblue;
     color: teal;
-    padding: 5px;
-    font-family: Verdana serif;
+    box-sizing: border-box;
+    width: max-content;
+    height: max-content;
+    border-radius: 5px;
 }
 
 .form {
-    margin-left: 10px;
+    margin-left: 37%;
+    background-color: aliceblue;
+    box-sizing: border-box;
+    width: max-content;
+    height: max-content;
+    padding: 30px;
+    padding-top: 1px;
+    border-radius: 20px;
+}
+.title {
+    color: teal;
+    margin-left: 23%;
+    font-family: Verdana, serif;
+}
+
+.subtitle {
+    color: teal;
+    font-family: Verdana, serif;
+    font-size: medium;
+}
+
+.remember {
+    vertical-align: center;
+}
+
+.formElement{
+    padding: 5px;
+    box-sizing: border-box;
+    width: max-content;
+    height: max-content;
+    border-radius: 5px;
+}
+
+.captcha {
+    box-sizing: border-box;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+}
+
+.button {
+    margin-top: 10px;
+    margin-left: 5px;
+    font-size: 15px;
 }

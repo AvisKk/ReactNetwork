@@ -1,5 +1,5 @@
 import styles from './formsControls.module.css'
-import {Field} from "redux-form";
+import {Field} from "react-final-form";
 export const Textarea = ({input, meta: {touched, error}, ...props}) => {
     const hasError = touched && error;
     return (<>
