@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.css": "/ReactNetwork/static/css/main.93164646.css",
-    "main.js": "/ReactNetwork/static/js/main.ab0a4ff5.js",
+    "main.css": "/ReactNetwork/static/css/main.43856592.css",
+    "main.js": "/ReactNetwork/static/js/main.11cce555.js",
     "static/css/758.3f6162c7.chunk.css": "/ReactNetwork/static/css/758.3f6162c7.chunk.css",
-    "static/js/758.99791354.chunk.js": "/ReactNetwork/static/js/758.99791354.chunk.js",
-    "static/css/687.93abb12e.chunk.css": "/ReactNetwork/static/css/687.93abb12e.chunk.css",
-    "static/js/687.2794990a.chunk.js": "/ReactNetwork/static/js/687.2794990a.chunk.js",
+    "static/js/758.b04216dc.chunk.js": "/ReactNetwork/static/js/758.b04216dc.chunk.js",
+    "static/css/687.ed264805.chunk.css": "/ReactNetwork/static/css/687.ed264805.chunk.css",
+    "static/js/687.6e9dcfc8.chunk.js": "/ReactNetwork/static/js/687.6e9dcfc8.chunk.js",
     "static/js/496.78aa4f58.chunk.js": "/ReactNetwork/static/js/496.78aa4f58.chunk.js",
     "static/media/InstagramIcon.png": "/ReactNetwork/static/media/InstagramIcon.fe5c5dbaf8f6296ec7a7.png",
     "static/media/no.png": "/ReactNetwork/static/media/no.2cefdb551cb956639076.png",
@@ -19,16 +19,16 @@
     "static/media/UploadIcon.png": "/ReactNetwork/static/media/UploadIcon.a6a6085823c3e3bf6917.png",
     "static/media/Loader.svg.svg": "/ReactNetwork/static/media/Loader.svg.859d0870d4de6e3f5af8cd4110ffd500.svg",
     "index.html": "/ReactNetwork/index.html",
-    "main.93164646.css.map": "/ReactNetwork/static/css/main.93164646.css.map",
-    "main.ab0a4ff5.js.map": "/ReactNetwork/static/js/main.ab0a4ff5.js.map",
+    "main.43856592.css.map": "/ReactNetwork/static/css/main.43856592.css.map",
+    "main.11cce555.js.map": "/ReactNetwork/static/js/main.11cce555.js.map",
     "758.3f6162c7.chunk.css.map": "/ReactNetwork/static/css/758.3f6162c7.chunk.css.map",
-    "758.99791354.chunk.js.map": "/ReactNetwork/static/js/758.99791354.chunk.js.map",
-    "687.93abb12e.chunk.css.map": "/ReactNetwork/static/css/687.93abb12e.chunk.css.map",
-    "687.2794990a.chunk.js.map": "/ReactNetwork/static/js/687.2794990a.chunk.js.map",
+    "758.b04216dc.chunk.js.map": "/ReactNetwork/static/js/758.b04216dc.chunk.js.map",
+    "687.ed264805.chunk.css.map": "/ReactNetwork/static/css/687.ed264805.chunk.css.map",
+    "687.6e9dcfc8.chunk.js.map": "/ReactNetwork/static/js/687.6e9dcfc8.chunk.js.map",
     "496.78aa4f58.chunk.js.map": "/ReactNetwork/static/js/496.78aa4f58.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.93164646.css",
-    "static/js/main.ab0a4ff5.js"
+    "static/css/main.43856592.css",
+    "static/js/main.11cce555.js"
   ]
 }
