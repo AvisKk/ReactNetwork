@@ -35,3 +35,14 @@
     width: 20px;
     vertical-align: middle;
 }
+
+.exitIcon {
+    transition: all 250ms ease;
+}
+
+.exitIcon:hover {
+    background-color: teal;
+    padding: 3px;
+    border-radius: 5px;
+    vertical-align: middle;
+}

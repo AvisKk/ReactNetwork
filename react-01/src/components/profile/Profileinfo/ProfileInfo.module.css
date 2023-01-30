@@ -61,4 +61,10 @@
     padding: 3px;
     border-radius: 15px;
     box-shadow: 0 0 10px teal;
+    transition: all 250ms ease;
+}
+
+.uploadIco:hover {
+    background-color: powderblue;
+    box-shadow: 0 0 5px darkslategrey;
 }

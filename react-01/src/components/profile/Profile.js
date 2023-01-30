@@ -39,8 +39,7 @@ const Profile = (props) => {
                                                                  onSubmit={onSubmit}/> :
                         <Information goToEditMode={() => {
                             setEditMode(true)
-                        }}
-                                     profile={props.profile} userId={props.userId}/>
+                        }} profile={props.profile} userId={props.userId}/>
                     }
                 </div>
             </div>

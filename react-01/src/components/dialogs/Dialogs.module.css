@@ -1,10 +1,12 @@
 .dialogs {
     display: grid;
-    grid-template-columns: 1.5fr 8fr;
+    grid-template-columns: 200px 8fr;
     grid-template-rows: 370px;
 }
 
 .dialogItems {
+    padding-top: 10px;
+    font-family: Verdana, serif;
     margin-bottom: 20px;
     margin-right: 10px;
     background-color: aliceblue;
@@ -41,6 +43,16 @@
     font-size: 17px;
     color: darkslategray;
     text-decoration: none;
+
+    transition: all 250ms ease;
+}
+
+.dialogItems .item:hover {
+    font-size: 15pt;
+    color: teal;
+
+    box-shadow: 0 0 4px lightseagreen;
+    border-radius: 15px;
 }
 
 .dialogItems .active {
@@ -102,6 +114,14 @@ border-radius: 5px;
     padding: 5px;
     border-radius: 5px;
     margin-left: 10px;
+
+    transition: all 250ms ease;
+}
+
+.button:hover {
+    background: aliceblue;
+    color: teal;
+    box-shadow: 0 0 4px lightseagreen;
 }
 
 .back{

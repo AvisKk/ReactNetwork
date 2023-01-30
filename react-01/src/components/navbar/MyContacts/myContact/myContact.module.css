@@ -13,6 +13,8 @@
     margin-top: 5px;
     margin-left: 10px;
     margin-bottom: 10px;
+
+    transition: all 250ms ease;
 }
 
 .item .active{
@@ -23,4 +25,8 @@
     margin-top: 5px;
     background-color: #4DB6AC;
     border-radius: 10px;
+}
+
+.item:hover {
+    color: darkslategrey;
 }

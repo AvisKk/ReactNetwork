@@ -10,8 +10,8 @@ let Users = ({currentPage, totalUsersCount, pageSize, onPageChanged, ...props}) 
             <Preloader/>
             :
             props.users.map(u => <div key={u.id}><User user={u} followingInProgress={props.followingInProgress}
-            unfollowing={props.unfollowing}
-                                            following={props.following}/></div>)
+                                                       unfollowingSaga={props.unfollowingSaga}
+                                                       followingSaga={props.followingSaga}/></div>)
         }
     </div>
 }

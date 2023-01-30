@@ -1,12 +1,10 @@
 import {connect} from "react-redux";
 import {
     setCurrentPage,
-    toggleFollowingProgress,
-    getUsers,
-    following, unfollowing
+    toggleFollowingProgress, getUsersSagaAction, followingSaga, unfollowingSaga
 } from "../../Redux/users-reducer";
 import Users from "./Users";
-import React from "react";
+import React, {useEffect} from "react";
 import {
     GetCurrentPage,
     GetFollowingProgress,
@@ -15,29 +13,32 @@ import {
     GetTotalUsersCount,
     GetUsers
 } from "../../Redux/usersSelectors";
-class UsersAPI extends React.Component {
-    componentDidMount() {
-        this.props.getUsers(this.props.currentPage, this.props.pageSize)
+const UsersAPI = (props) => {
+
+    useEffect(() => {
+        props.getUsersSagaAction(props.currentPage,props.pageSize)
+    }, [props.currentPage])
+
+    const onPageChanged = (pageNumber) => {
+        props.getUsersSagaAction(pageNumber, props.pageSize)
+        props.setCurrentPage(pageNumber);
     };
-    onPageChanged = (pageNumber) => {
-        this.props.getUsers(pageNumber, this.props.pageSize)
-        this.props.setCurrentPage(pageNumber);
-    };
-    render() {
+
         return <>
-                <Users users={this.props.users}
-                       onPageChanged={this.onPageChanged}
-                       currentPage={this.props.currentPage}
-                       pageSize={this.props.pageSize}
-                       totalUsersCount={this.props.totalUsersCount}
-                       followingInProgress={this.props.followingInProgress}
-                       toggleFollowingProgress={this.props.toggleFollowingProgress}
-                       following={this.props.following}
-                       unfollowing={this.props.unfollowing}
-                       isFetching={this.props.isFetching}
+                <Users users={props.users}
+                       onPageChanged={onPageChanged}
+                       currentPage={props.currentPage}
+                       pageSize={props.pageSize}
+                       totalUsersCount={props.totalUsersCount}
+                       followingInProgress={props.followingInProgress}
+                       toggleFollowingProgress={props.toggleFollowingProgress}
+
+                       unfollowingSaga={props.unfollowingSaga}
+
+                       isFetching={props.isFetching}
+                       followingSaga={props.followingSaga}
                 />
         </>
-    }
 }
 let mapStateToProps = (state) => {
     return {
@@ -50,4 +51,5 @@ let mapStateToProps = (state) => {
     }
 }
 export default connect(mapStateToProps, {
-    setCurrentPage, toggleFollowingProgress, getUsers, following, unfollowing})(UsersAPI);
+    setCurrentPage, toggleFollowingProgress, unfollowingSaga, getUsersSagaAction
+,followingSaga})(UsersAPI);

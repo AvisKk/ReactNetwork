@@ -1,9 +1,19 @@
+.elements {
+    box-sizing: border-box;
+    width: max-content;
+    height: max-content;
+    margin-left: 30px;
+    padding: 5px;
+    border-radius: 10px;
+}
 
 .selectedPage {
     font-weight: bold;
-    padding: 10px;
+    padding: 7px;
     font-family: Verdana, serif;
-    color: #4DB6AC;
+    color: aliceblue;
+    border-radius: 5px;
+    background-color: #4db6ac;
 }
 
 .notSelectedPage {
@@ -12,16 +22,29 @@
     color: darkslategray;
 }
 
+.notSelectedPage:hover {
+    color: teal;
+    font-weight: bold;
+    box-shadow: 0 0 4px teal;
+    border-radius: 5px;
+}
+
 .button {
     font-family: Verdana, serif;
     color: teal;
     font-size: 15px;
-
+    margin-left: 4px;
+    margin-right: 4px;
     border-radius: 10px;
     border: none;
-
-
     background-color: aliceblue;
 
-    margin-left: 10px;
+    box-shadow: 0 0 4px teal;
+    transition: all 250ms ease;
+}
+
+.button:hover{
+    background: teal;
+    color: aliceblue;
+    box-shadow: 0 0 4px darkslategrey;
 }

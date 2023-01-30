@@ -2,9 +2,9 @@ import s from './Dialogs.module.css'
 import DialogItem from "./DialogItem/DialogItem";
 import Message from "./Message/Message";
 import React, {useEffect, useRef} from "react";
-import {Field, useForm} from "react-final-form";
+import {Field, Form} from "react-final-form";
 import {Textarea} from "../common/formsControls/formsControls";
-import {maxLength, required} from "../../utils/validators/validators";
+import {maxLength} from "../../utils/validators/validators";
 
 
 const Dialogs = (props) => {
@@ -37,27 +37,19 @@ const Dialogs = (props) => {
                     <div ref={messagesEndRef}/>
                 </div>
                 <div className={s.back}>
-                    <AddMessagesReduxForm onSubmit={addNewMessage}/>
+                    <AddMessagesForm onSubmit={addNewMessage}/>
                 </div>
             </div>
         </div>
     )
 }
-
-const AddMessagesReduxForm = (props) => (
-    <Form
-        onSubmit={onSubmit}
-        validate={validate}
-        render={({ handleSubmit }) => (
-        <form onSubmit={props.handleSubmit}>
+const AddMessagesForm = (props) => (
+    <Form onSubmit={props.onSubmit}
+          render={({ handleSubmit }) => (
+        <form onSubmit={handleSubmit}>
             <Field component={Textarea} placeholder={"New Message"} name={"newMessageBody"}
-                   className={s.textarea} validate={[required (" "), maxLength(150)]}/>
+                   className={s.textarea} validate={maxLength(150)}/>
             <button className={s.button}>Send</button>
         </form>
     )}/>)
-
-/*const AddMessagesReduxForm = useForm({
-    form: 'messages'
-})(AddMessagesForm)*/
-
 export default Dialogs;

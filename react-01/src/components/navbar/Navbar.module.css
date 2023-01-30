@@ -1,8 +1,8 @@
-
 .nav {
     grid-area: n;
     background-color: teal;
     padding: 20px;
+    width: 110px;
 }
 
 .item {
@@ -10,6 +10,11 @@
     text-decoration: none;
     font-family: Verdana, serif;
     padding: 4px;
+
+    transition: all 250ms ease;
+}
+.item:hover {
+    color: darkslategrey;
 }
 
 .item a.active {

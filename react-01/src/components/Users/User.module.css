@@ -5,8 +5,49 @@
     object-fit: cover;
     border-radius: 100px;
     background-color: aliceblue;
+    box-shadow: 0 0 4px teal;
 }
 .users {
-    padding: 20px;
-    margin-left: 15px;
+    margin-left: 35px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+
+    padding: 9px;
+
+    display: grid;
+    grid-template-areas: "p d";
+    grid-template-columns: 90px 1fr;
+
+    background-color: aliceblue;
+    border-radius: 20px;
+    box-sizing: border-box;
+    height: max-content;
+    width: max-content;
+
+    font-family: Verdana, serif;
+}
+.description{
+    box-sizing: border-box;
+    height: max-content;
+    width: max-content;
+    margin-top: 5px;
+}
+
+.buttons{
+    background-color: lightseagreen;
+    outline: none;
+    border: none;
+    color: aliceblue;
+    font-family: Verdana, serif;
+    margin-top: 5px;
+    margin-left: 5px;
+    padding: 2px;
+    border-radius: 5px;
+    transition: all 250ms ease;
+}
+
+.buttons:hover {
+    background: aliceblue;
+    color: teal;
+    box-shadow: 0 0 4px lightseagreen;
 }

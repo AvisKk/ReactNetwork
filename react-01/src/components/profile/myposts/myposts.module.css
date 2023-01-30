@@ -32,6 +32,13 @@
     font-family: Verdana, serif;
     padding: 5px;
     border-radius: 5px;
+    transition: all 250ms ease;
+}
+
+.button:hover {
+    background: aliceblue;
+    color: teal;
+    box-shadow: 0 0 4px lightseagreen;
 }
 
 .postsElement {

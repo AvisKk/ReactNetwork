@@ -3,8 +3,7 @@ export const required = (name) => (value) => {
     return name
 }
 
-export const maxLength = (maxLength, minLength) => (value) => {
+export const maxLength = (maxLength) => (value) => {
     if (value && value.length > maxLength) return `Max length is ${maxLength} symbols`;
-    if (value && value.length < minLength ) return 'Is empty'
     return undefined
 }

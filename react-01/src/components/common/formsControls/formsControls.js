@@ -1,5 +1,4 @@
 import styles from './formsControls.module.css'
-import {Field} from "react-final-form";
 export const Textarea = ({input, meta: {touched, error}, ...props}) => {
     const hasError = touched && error;
     return (<>
@@ -14,10 +13,3 @@ export const Input = ({input, meta: {touched, error}, ...props}) => {
             {hasError && <span>{error}</span>}
         </div>)
 }
-
-export const createField = (placeHolder, name, component, validators, props = {}, text = "") =>(
-    <div>
-    <Field placeholder={placeHolder} name={name}
-           component={component} validate={validators} {...props}/>{text}
-    </div>
-)

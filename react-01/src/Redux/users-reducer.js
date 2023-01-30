@@ -1,6 +1,8 @@
 import {usersAPI} from "../API/UsersAPI";
 import {followAPI} from "../API/FollowAPI";
 import {updateObjectInArray} from "../utils/objects-helper";
+import {put, takeEvery} from "redux-saga/effects";
+
 
 const FOLLOW = 'FOLLOW';
 const UNFOLLOW = 'UNFOLLOW';
@@ -11,7 +13,7 @@ const TOGGLE_IS_FETCHING = 'TOGGLE_IS_FETCHING';
 const TOGGLE_IS_FOLLOWING_PROGRESS = 'TOGGLE_IS_FOLLOWING_PROGRESS';
 
 let initialState = {
-    users: [], pageSize: 10, totalUsersCount: 0, currentPage: 1, isFetching: true, followingInProgress: [],
+    users: [], pageSize: 10, totalUsersCount: 0, currentPage: 1, isFetching: false, followingInProgress: [],
 };
 const usersReducer = (state = initialState, action) => {
 
@@ -54,28 +56,42 @@ export const setTotalUsersCount = (totalUsersCount) => ({type: TOTAL_USERS_COUNT
 export const ToggleFetching = (isFetching) => ({type: TOGGLE_IS_FETCHING, isFetching})
 export const toggleFollowingProgress = (isFetching, userId) => ({
     type: TOGGLE_IS_FOLLOWING_PROGRESS, isFetching, userId})
-export const getUsers = (currentPage, pageSize) => async (dispatch) => {
-    dispatch(ToggleFetching(true))
-    let data = await usersAPI.getUsers(currentPage, pageSize)
-    dispatch(ToggleFetching(false))
-    dispatch(setUsers(data.items));
-    dispatch(setTotalUsersCount(data.totalCount))
-}
 
-const followUnfollowFlow = async (dispatch, id, apiMethod, actionCreator) => {
-    dispatch(toggleFollowingProgress(true, id));
-    let data = await apiMethod(id)
+//Saga
+const GET_USERS_SAGA = 'GET_USERS_SAGA'
+const FOLLOWING_SAGA = 'FOLLOWING_SAGA'
+const UNFOLLOW_USER_SAGA = 'UNFOLLOW_USER_SAGA'
+export const getUsersSagaAction = (currentPage, pageSize) => ({type: GET_USERS_SAGA, currentPage, pageSize})
+export const followingSaga = (id) => ({type: FOLLOWING_SAGA, id})
+export const unfollowingSaga = (id) => ({type: UNFOLLOW_USER_SAGA, id})
+function* getUsersSaga ({currentPage, pageSize}) {
+    yield put(ToggleFetching(true))
+    let data = yield (usersAPI.getUsers(currentPage, pageSize))
+    yield put(ToggleFetching(false))
+    yield put(setUsers(data.items))
+    yield put(setTotalUsersCount(data.totalCount))
+}
+function* followUserSaga ({id}) {
+    yield put(ToggleFetching(true, id))
+    let data = yield (followAPI.follow(id))
     if (data.resultCode === 0) {
-        dispatch(actionCreator(id))
+        yield put(follow(id))
     }
-    dispatch(toggleFollowingProgress(false, id));
+    yield put(ToggleFetching(false, id))
 }
-export const following = (id) => (dispatch) => {
-    followUnfollowFlow(dispatch, id, followAPI.follow.bind(followAPI), follow)
+function* unfollowUserSaga ({id}) {
+    yield put(ToggleFetching(true, id))
+    let data = yield (followAPI.unfollow(id))
+    if (data.resultCode === 0) {
+        yield put(unfollow(id))
+    }
+    yield put(ToggleFetching(false, id))
 }
-
-export const unfollowing = (id) => (dispatch) => {
-    followUnfollowFlow(dispatch, id, followAPI.unfollow.bind(followAPI), unfollow)
+export function* getUsersWatcher () {
+    yield takeEvery('GET_USERS_SAGA', getUsersSaga)
+    yield takeEvery('FOLLOWING_SAGA', followUserSaga)
+    yield takeEvery('UNFOLLOW_USER_SAGA', unfollowUserSaga)
 }
+///////////
 
 export default usersReducer;

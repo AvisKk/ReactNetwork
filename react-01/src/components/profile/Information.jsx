@@ -19,8 +19,8 @@ const Information = (props) => {
                 <img className={styles.answer} src={yes} alt="yes"/>
                 : <img className={styles.answer} src={no} alt="no"/>}
             </div>
-            {props.profile.lookingForAJob ? <div>My professional skills:
-                {props.profile.lookingForAJobDescription} </div> : ''}
+            {props.profile.lookingForAJob ? <div><b>My professional skills:</b>
+                <div>{props.profile.lookingForAJobDescription}</div> </div> : ''}
             <div className={styles.contacts}><b>Contacts:</b>
                 <Contact contactIcon={GitHubIcon} props={props.profile.contacts.github}/>
                 <Contact contactIcon={VkIcon} props={props.profile.contacts.vk}/>

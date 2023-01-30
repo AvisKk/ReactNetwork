@@ -5,10 +5,12 @@ import LogoutImg from "./../common/LogoutImg.png"
      return <header className={s.header}>
          <div className={s.loginBlock}>
              {props.isAuth ?
-                 <div>{props.login} <input type={"image"}
+                 <div>
+                     {props.login} <input type={"image"}
                                            alt={'Exit'}
                                            src={LogoutImg}
-                                           onClick={props.logout}></input></div>
+                                           onClick={props.logout}
+                                           className={s.exitIcon}></input></div>
                  : <NavLink to={'/login'}>Login</NavLink>}
          </div>
          <img src="https://mediascope.net/rkn/img/logo.png" alt=""/>
